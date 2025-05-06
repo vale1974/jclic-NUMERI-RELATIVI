@@ -12,42 +12,20 @@
             text-align: center;
             font-family: Arial, sans-serif;
         }
-        #jclic {
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Numeri Relativi</h1>
-        <div id="jclic"></div>
+        <applet code="JClicApplet" 
+                archive="https://clic.xtec.cat/dist/jclic/jclic.jar" 
+                width="800" 
+                height="600">
+            <param name="project" value="numeri_relativi_mio.jclic.zip"/>
+            <param name="skin" value="@blue.xml"/>
+            <param name="language" value="it"/>
+            <param name="exitUrl" value=""/>
+        </applet>
     </div>
-    <script type="text/javascript" src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
-    <script type="text/javascript">
-        window.onload = function() {
-            if (typeof JClicObject !== 'undefined') {
-                JClicObject.create("jclic", {
-                    project: "https://vale1974.github.io/jclic-NUMERI-RELATIVI/numeri_relativi_mio.jclic.zip",
-                    width: 800,
-                    height: 600,
-                    language: "it",
-                    skin: "@blue",
-                    loaded: function() {
-                        console.log("JClic activity loaded!");
-                    },
-                    error: function(msg) {
-                        console.error("Error loading JClic activity:", msg);
-                    }
-                });
-            } else {
-                console.error("JClic library not loaded!");
-            }
-        };
-    </script>
 </body>
 </html>
