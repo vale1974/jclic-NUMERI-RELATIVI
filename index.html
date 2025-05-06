@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeri Relativi - Attività JClic</title>
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #jclic {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+    </style>
+    <script src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Numeri Relativi</h1>
+        <div id="jclic"></div>
+    </div>
+    <script>
+        JClicObject.create("jclic", {
+            project: "numeri_relativi_mio.jclic.zip",
+            width: 800,
+            height: 600
+        });
+    </script>
+</body>
+</html>
